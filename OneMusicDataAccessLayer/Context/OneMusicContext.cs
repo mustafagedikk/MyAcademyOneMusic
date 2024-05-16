@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using OneMusic.EntityLayer.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,10 @@ using System.Threading.Tasks;
 
 namespace OneMusic.DataAccessLayer.Context
 {
-    public class OneMusicContext : DbContext
+    /// <summary>
+    /// Normalde db contextden miras alıyordu fakat identity ekledikten sonra IdentityDbContextten miras alıyor
+    /// </summary>
+    public class OneMusicContext : IdentityDbContext<AppUser, AppRole,int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

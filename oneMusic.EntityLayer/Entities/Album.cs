@@ -17,6 +17,6 @@ namespace OneMusic.EntityLayer.Entities
         public int SingerId { get; set; }
         public Singer Singer { get; set; }
 
-        public List<Album> Albums { get; set; }
+        public List<Song> Songs{ get; set; }
     }
 }

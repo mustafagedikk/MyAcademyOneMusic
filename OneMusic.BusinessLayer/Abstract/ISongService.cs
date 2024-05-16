@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OneMusic.DataAccessLayer.Abstract
+namespace OneMusic.BusinessLayer.Abstract
 {
-    public interface IBannerDalcs:IGenericDal<Banner>
+    public interface ISongService:IGenericService<Song>
     {
     }
 }
